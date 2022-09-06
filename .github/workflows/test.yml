@@ -12,9 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        target: [extended, dev]
-        suite: [system]
 
     steps:
 
@@ -23,9 +20,9 @@ jobs:
       with: 
         jdksource: 'customized'
         customizedSdkUrl: ${{ env.CUSTOMIZED_SDK_URL }} 
-        aqa-testsRepo: 'adoptium/aqa-tests:v0.9.4.2-release' # Make sure this branch is set to the latest release branch
-        build_list: ${{ matrix.suite }}
-        target: _${{ matrix.target }}.${{ matrix.suite }}
+        aqa-testsRepo: 'adoptium/aqa-tests:master' 
+        build_list: 'system/jcstress'
+        target: '_jcstress_SampleTestBench'
 
     - uses: actions/upload-artifact@v2
       if: always() # Always run this step (even if the tests failed)

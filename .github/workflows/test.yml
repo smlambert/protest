@@ -20,7 +20,7 @@ jobs:
       with: 
         jdksource: 'customized'
         customizedSdkUrl: ${{ env.CUSTOMIZED_SDK_URL }} 
-        aqa-testsRepo: 'smlambert/openjdk-tests:jcstress1' 
+        aqa-testsRepo: 'adoptium/aqa-tests:master' 
         build_list: 'system/jcstress'
         target: '_dev.system'
 

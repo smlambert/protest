@@ -22,7 +22,7 @@ jobs:
         customizedSdkUrl: ${{ env.CUSTOMIZED_SDK_URL }} 
         aqa-testsRepo: 'adoptium/aqa-tests:master' 
         build_list: 'system/jcstress'
-        target: '_dev.system'
+        target: '_jcstress_SampleTestBench'
 
     - uses: actions/upload-artifact@v2
       if: always() # Always run this step (even if the tests failed)

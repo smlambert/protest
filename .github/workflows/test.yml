@@ -28,7 +28,7 @@ jobs:
       fail-fast: true
 
     steps:
-      - uses: adoptium/run-aqa@v2.0.1
+      - uses: adoptium/run-aqa@master
         name: Generate parallelList - system/jcstress dev level targets
         with:
           jdksource: 'customized'
@@ -63,7 +63,7 @@ jobs:
           path: ./
 
       - name: Run AQA Parallel Test - dev.system_${{ matrix.test_list }}
-        uses: adoptium/run-aqa@v2.0.1
+        uses: adoptium/run-aqa@master
         with:
           jdksource: 'customized'
           customizedSdkUrl: ${{ inputs.customizedSdkUrl }}

@@ -67,7 +67,7 @@ jobs:
         with:
           jdksource: 'customized'
           customizedSdkUrl: ${{ inputs.customizedSdkUrl }}
-          aqa-testsRepo: 'adoptium/aqa-tests:v0.9.4-release' # Make sure this branch is set to the latest release branch
+          aqa-testsRepo: 'jabrena/aqa-tests:feature/dynamic-jcstress-playlist' 
           build_list: system/jcstress
           target : -f parallelList.mk ${{ matrix.test_list }}
 
